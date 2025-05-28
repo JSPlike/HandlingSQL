@@ -6,7 +6,10 @@ router.post('/execute', async (req, res) => {
   const { sql } = req.body;
   try {
     const result = await db.executeSQL(sql);
-    res.json(result);
+
+    const plan = await db.getExecutionPlan(sql);
+
+    res.json({ result, plan });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
