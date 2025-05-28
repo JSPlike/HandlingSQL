@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  oracle-xe:
+    image: gvenzl/oracle-xe
+    container_name: oracle-xe
+    ports:
+      - "1521:1521"     # Oracle 기본 포트
+      - "8085:8085"     # APEX (웹관리 UI용)
+    environment:
+      ORACLE_PASSWORD: oracle
+      APP_USER: app
+      APP_USER_PASSWORD: app123
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+
+volumes:
+  oracle_data:
