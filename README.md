@@ -76,3 +76,20 @@ SELECT department, COUNT(*) FROM employee GROUP BY department;
 
 Oracle에서는 SET AUTOTRACE ON이 있는데,
 DBeaver에선 하단 탭에서 Query Statistics (쿼리 시간, fetch time 등) 확인 가능.
+
+
+## 앱 구성
+
+1. react 환경구성
+
+  1. node 설치확인
+  ```
+  node -v
+  npm -v
+  ```
+
+  2. react app 생성
+  ```
+  npx create-react-app HandlingSQL
+  ```
+
