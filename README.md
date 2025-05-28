@@ -55,3 +55,24 @@ CREATE INDEX idx_emp_dept ON employee(department);
 |Cost|높음|낮음|
 |Rows|동일|동일|
 |Filtered|10000 중 일부|	10000 중 일부|
+
+✅ 5. 정렬, 그룹핑 등 추가 조건 실험
+
+예: ORDER BY, GROUP BY, JOIN, SUBQUERY, IN, EXISTS 등
+
+-- 예제 1: ORDER BY
+```
+EXPLAIN PLAN FOR
+SELECT * FROM employee WHERE department = 'IT' ORDER BY salary;
+```
+
+-- 예제 2: GROUP BY
+```
+EXPLAIN PLAN FOR
+SELECT department, COUNT(*) FROM employee GROUP BY department;
+```
+
+✅ 6. AUTOTRACE 기능처럼 실행 시간 확인하기
+
+Oracle에서는 SET AUTOTRACE ON이 있는데,
+DBeaver에선 하단 탭에서 Query Statistics (쿼리 시간, fetch time 등) 확인 가능.
