@@ -11,7 +11,7 @@ export default function SQLPlayground() {
   const execute = async () => {
     try {
       console.log("쿼리 실행 ===");
-      const res = await axios.post('http://localhost:4000/api/execute', { sql });
+      const res = await axios.post('http://localhost:4000/api/execute', { sql }, { withCredentials: true });
 
       console.log(res);
       console.log("response.data:", res.data); // 여기서 구조 확인

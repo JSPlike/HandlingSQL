@@ -19,7 +19,7 @@ function Login() {
       const response = await axios.post('http://localhost:4000/api/auth/login', {
         username,
         password,
-      });
+      }, { withCredentials: true });
 
       setMessage(response.data.message || '로그인 성공');
       navigate('/app');

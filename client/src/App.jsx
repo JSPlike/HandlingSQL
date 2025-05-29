@@ -16,9 +16,10 @@ function CheckAuth() {
     axios.get('http://localhost:4000/api/auth/session', {
       withCredentials: true,
     })
-      .then(() => {
+      .then((res) => {
         setIsLoggedIn(true);
         setLoading(false);
+        console.log('[세션 정보]', res.data);
       })
       .catch(() => {
         setIsLoggedIn(false);
