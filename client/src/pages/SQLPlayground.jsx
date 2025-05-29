@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
-import '../static/css/SQLPlayground.css';
+import '../static/css/SqlPlayground.css';
 
 export default function SQLPlayground() {
-  const [sql, setSql] = useState('SELECT * FROM users');
+  const [sql, setSql] = useState('SELECT * FROM TEST_EMPLOYEE');
   const [result, setResult] = useState(null);
   const [plan, setPlan] = useState(null); // 실행계획 저장용
   const [error, setError] = useState(null);
