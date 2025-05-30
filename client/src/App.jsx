@@ -4,6 +4,7 @@ import axios from 'axios';
 import AppLayout from './layout/AppLayout';
 import SqlPlayground from './pages/SqlPlayground';
 import CreateTable from './pages/CreateTable';
+import SchemaInfo from './pages/SchemaInfo';
 import Register from './pages/Register';
 import Login from './pages/Login';
 
@@ -41,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<CheckAuth />} />
         <Route path="/app" element={<AppLayout />}>
+          <Route path="" element={<SchemaInfo />} /> 
           <Route path="create-table" element={<CreateTable />} />
           <Route path="sql-test" element={<SqlPlayground />} />
         </Route>
