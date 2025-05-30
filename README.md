@@ -2,6 +2,22 @@
 
 ## 기본 쿼리 테스트 가이드
 
+### 화면구성
+
+![image](https://github.com/user-attachments/assets/debfde74-b4a0-4433-900c-ca7341103e75)
+
+
+![image](https://github.com/user-attachments/assets/3b785e79-b920-4a66-babf-d6af4d956439)
+
+
+![image](https://github.com/user-attachments/assets/2ad55ccb-b905-46ff-ba3a-5fcf2fb956ab)
+
+
+![image](https://github.com/user-attachments/assets/e63a2d74-95be-495e-aa36-4af33adf4c0d)
+
+
+------
+
 ✅ 1. 테스트용 테이블 생성 & 데이터 삽입
 
 ```
