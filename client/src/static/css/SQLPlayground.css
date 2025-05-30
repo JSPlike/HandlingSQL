@@ -1,26 +1,140 @@
-.json-box .plan-box {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.sql-textarea {
+  width: 100%;
+  min-height: 120px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
   padding: 10px;
-  max-height: 300px;
-  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.execute-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.execute-btn:hover {
+  background-color: #0056b3;
+}
+
+.result-section {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.json-box, .plan-box {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
   white-space: pre-wrap;
-  font-family: monospace;
+  overflow: auto;
+  max-height: 400px;
+  max-width: 100%;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.table-box {
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  max-height: 400px;
+  max-width: 100%;
+  overflow: auto;
+  background-color: white;
 }
 
 .result-table {
-  border-collapse: collapse;
   width: 100%;
-  margin-top: 10px;
-}
-
-.result-table th,
-.result-table td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  border-collapse: collapse;
+  font-size: 13px;
 }
 
 .result-table th {
-  background-color: #eee;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.result-table td {
+  border: 1px solid #dee2e6;
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+.result-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.result-table tr:hover {
+  background-color: #e9ecef;
+}
+
+.error-box {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+/* 스크롤바 스타일링 */
+.json-box::-webkit-scrollbar,
+.plan-box::-webkit-scrollbar,
+.table-box::-webkit-scrollbar,
+.error-box::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.json-box::-webkit-scrollbar-track,
+.plan-box::-webkit-scrollbar-track,
+.table-box::-webkit-scrollbar-track,
+.error-box::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.json-box::-webkit-scrollbar-thumb,
+.plan-box::-webkit-scrollbar-thumb,
+.table-box::-webkit-scrollbar-thumb,
+.error-box::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.json-box::-webkit-scrollbar-thumb:hover,
+.plan-box::-webkit-scrollbar-thumb:hover,
+.table-box::-webkit-scrollbar-thumb:hover,
+.error-box::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
